@@ -225,8 +225,7 @@ function solarSystem(container) {
         new Astro(STARMAN, cx-6.364150296583878E+10, cy-1.996812140241804E+11, 2.064456758866443E+04, -1.283240781976068E+04)];
     var universe = new Universe("Solar System", GRAVITY, size, astros);
 
-    console.log(document.currentScript.src)
-    console.log(location.href)
+    console.log(document.getElementsByTagName("script")[scripts.length-1].src)
 
     loadHTML(false, "/orbiter.html", container);
     var dpatts = [["[s]", 500],
