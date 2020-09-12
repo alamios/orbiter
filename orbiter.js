@@ -1,5 +1,7 @@
 /*
- * 
+ * Requirements
+ *     - ORBITER_PATH should be defined
+ 
  * Data: https://ssd.jpl.nasa.gov/horizons.cgi
  * Units: kg / m / m/s
  * Date: 2020/01/01
@@ -225,14 +227,14 @@ function solarSystem(container) {
         new Astro(STARMAN, cx-6.364150296583878E+10, cy-1.996812140241804E+11, 2.064456758866443E+04, -1.283240781976068E+04)];
     var universe = new Universe("Solar System", GRAVITY, size, astros);
 
-    loadHTML(false, "lib/orbiter/orbiter.html", container);
+    loadHTML(false, ORBITER_PATH + "/orbiter.html", container);
     var dpatts = [["[s]", 500],
-        [0, "orbiter/img/sun/sun1_[s].png"],
-        [1, "orbiter/img/mercury/mercury_[s].png"],
-        [1, "orbiter/img/venus/venus_[s].png"], 
-        [1, "orbiter/img/earth/earth_[s].png"], 
-        [1, "orbiter/img/mars/mars_[s].png"],
-        [2, "orbiter/img/starman/starman_[s].png"]];
+        [0, ORBITER_PATH + "/img/sun/sun1_[s].png"],
+        [1, ORBITER_PATH + "/img/mercury/mercury_[s].png"],
+        [1, ORBITER_PATH + "/img/venus/venus_[s].png"], 
+        [1, ORBITER_PATH + "/img/earth/earth_[s].png"], 
+        [1, ORBITER_PATH + "/img/mars/mars_[s].png"],
+        [2, ORBITER_PATH + "/img/starman/starman_[s].png"]];
     var ratios = [30, 1500, 7000000000];
     var stepreps = 20000;
     var stepinterval = 10;
@@ -248,10 +250,10 @@ function binarySystem(container) {
         new Astro(CYGNI61B, cx-2.0E+11, cy, 0, -2.5E+04)];
     var universe = new Universe("Binary System", GRAVITY, size, astros);
 
-    loadHTML(false, "lib/orbiter/orbiter.html", container);
+    loadHTML(false, ORBITER_PATH + "/orbiter.html", container);
     var dpatts = [["[s]", 500],
-        [0, "orbiter/img/sun/sun1_[s].png"],
-        [0, "orbiter/img/sun/sun2_[s].png"]];
+        [0, ORBITER_PATH + "/img/sun/sun1_[s].png"],
+        [0, ORBITER_PATH + "/img/sun/sun2_[s].png"]];
     var ratios = [50, 1500];
     var stepreps = 20000;
     var stepinterval = 10;
