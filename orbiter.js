@@ -228,6 +228,8 @@ function solarSystem(container) {
     var universe = new Universe("Solar System", GRAVITY, size, astros);
 
     loadHTML(false, ORBITER_PATH + "/orbiter.html", container);
+    replacePaths(ORBITER_PATH);
+
     var dpatts = [["[s]", 500],
         [0, ORBITER_PATH + "/img/sun/sun1_[s].png"],
         [1, ORBITER_PATH + "/img/mercury/mercury_[s].png"],
@@ -251,6 +253,8 @@ function binarySystem(container) {
     var universe = new Universe("Binary System", GRAVITY, size, astros);
 
     loadHTML(false, ORBITER_PATH + "/orbiter.html", container);
+    replacePaths(ORBITER_PATH);
+    
     var dpatts = [["[s]", 500],
         [0, ORBITER_PATH + "/img/sun/sun1_[s].png"],
         [0, ORBITER_PATH + "/img/sun/sun2_[s].png"]];

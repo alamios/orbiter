@@ -1,3 +1,16 @@
+<script>
+    // Replaces all orbiter path references to real path
+    function replacePaths(newPath) {
+        var lazys = document.querySelectorAll('img[data-lazysrc]');
+        for (lazy in lazys) {
+            var href = lazy.getAttribute("data-lazysrc");
+            lazy.setAttribute("data-lazysrc", href.replace("orbiter", newPath));
+        }
+        for (link in document.links) {
+            link.href = link.href.replace("orbiter", newPath);
+        }
+    }
+</script>
 <div id="orbiter">
     <div class="display">
         <canvas class="canvas"></canvas>
