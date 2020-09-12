@@ -225,7 +225,10 @@ function solarSystem(container) {
         new Astro(STARMAN, cx-6.364150296583878E+10, cy-1.996812140241804E+11, 2.064456758866443E+04, -1.283240781976068E+04)];
     var universe = new Universe("Solar System", GRAVITY, size, astros);
 
-    loadHTML(false, "./orbiter.html", container);
+    console.log(document.currentScript.src)
+    console.log(location.href)
+
+    loadHTML(false, "/orbiter.html", container);
     var dpatts = [["[s]", 500],
         [0, "orbiter/img/sun/sun1_[s].png"],
         [1, "orbiter/img/mercury/mercury_[s].png"],
