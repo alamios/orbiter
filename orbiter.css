@@ -1,0 +1,107 @@
+/*
+ *
+ * Display
+ *
+ */
+ #orbiter,
+#orbiter .display {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#orbiter .canvas {
+    position: absolute; 
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+#orbiter .info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    margin: 0 7px 4px;
+}
+#orbiter .info * {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: rgb(141, 141, 141);
+}
+#orbiter .info .system {
+    float: left;
+}
+#orbiter .info .credit-link {
+    float: right;
+}
+
+/*
+ *
+ * Credits
+ *
+ */
+#orbiter .credits {  
+    padding: 20px;
+}
+#orbiter .credits .credit-row {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 20px;
+}
+#orbiter .credits .credit-elem {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 5px;
+}
+#orbiter .credits .credit-elem:first-child {
+    margin-right: 20px;
+}
+#orbiter .credits .credit-img {
+    flex: 1;
+    padding: 20px;
+}
+#orbiter .credits .credit-txt {
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    margin: 20px 0;
+    border-left: 1px solid rgb(41, 41, 41);
+}
+#orbiter .credits .credit-txt p:nth-child(odd) {
+    font-weight: 900;
+}
+#orbiter .credits .credit-txt p:nth-child(even) {
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+#orbiter .credits .credit-txt p a {
+    font-weight: normal;
+}
+#orbiter .credits .credit-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#orbiter .credits .credit-goback {
+    font-size: 1.6rem;
+}
+
+/*
+ *
+ * Fullscreen
+ *
+ */
+:-moz-full-screen #orbiter .credit-link {
+    display: none;
+}
+:-webkit-full-screen #orbiter .credit-link {
+    display: none;
+}
+:-ms-fullscreen #orbiter .credit-link{
+    display: none;
+}
+:fullscreen #orbiter .credit-link {
+    display: none;
+}

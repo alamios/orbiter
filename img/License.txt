@@ -1,0 +1,36 @@
+
+Sun
+	Credit: Courtesy of NASA/SDO and the AIA, EVE, and HMI science teams.
+    License: SDO images and movies are not copyrighted unless explicitly noted. https://sdo.gsfc.nasa.gov/gallery/copyright/
+    Changes: Cropped the background and colored
+    Source: https://sdo.gsfc.nasa.gov/data/
+
+Mercury
+	Credit: NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institution of Washington
+	License: CC BY 2.0 https://creativecommons.org/licenses/by/2.0/
+	Changes: Cropped the background and colored
+	Source: https://www.flickr.com/photos/gsfc/8497927473/
+
+Venus
+	Credit: NASA / JPL
+	License: JPL Image Use Policy https://www.jpl.nasa.gov/imagepolicy/
+	Changes: Cropped the background and colored
+	Source: https://photojournal.jpl.nasa.gov/catalog/PIA00104
+
+Earth
+	Credit: Image created by Reto Stockli with the help of Alan Nelson, under the leadership of Fritz Hasler NASA / GSFC / NOAA / USGS.
+	License: CC BY 2.0 https://creativecommons.org/licenses/by/2.0/
+	Changes: Cropped the background and colored
+	Source: https://www.flickr.com/photos/gsfc/8244321945/
+
+Mars
+	Credit: NASA / JPL / MSSS
+	License: JPL Image Use Policy https://www.jpl.nasa.gov/imagepolicy/
+	Changes: Cropped the background and colored
+	Source: https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA02653
+
+Starman
+	Credit: Joe Haythornthwaite (nagualdesign https://en.wikipedia.org/wiki/User:Nagualdesign)
+	License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+	Changes: Cropped the car from the original
+	Source: https://en.wikipedia.org/wiki/File:Tesla_Roadster_mounted_on_Falcon_Heavy_upper_stage.png
