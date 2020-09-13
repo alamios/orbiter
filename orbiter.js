@@ -1,7 +1,5 @@
 /*
- * Requirements
- *     - ORBITER_PATH should be defined
- 
+ *
  * Data: https://ssd.jpl.nasa.gov/horizons.cgi
  * Units: kg / m / m/s
  * Date: 2020/01/01
@@ -214,7 +212,7 @@ class Orbiter {
     }
 }
 
-function solarSystem(container) {
+function solarSystem(container, libpath) {
     var size = 3.5 * AU;
     var cx = size/2;
     var cy = size/2;
@@ -227,23 +225,23 @@ function solarSystem(container) {
         new Astro(STARMAN, cx-6.364150296583878E+10, cy-1.996812140241804E+11, 2.064456758866443E+04, -1.283240781976068E+04)];
     var universe = new Universe("Solar System", GRAVITY, size, astros);
 
-    loadHTML(false, ORBITER_PATH + "/orbiter.html", container);
-    replacePaths(ORBITER_PATH);
+    loadHTML(false, libpath + "/orbiter.html", container);
+    replacePaths("orbiter", libpath);
 
     var dpatts = [["[s]", 500],
-        [0, ORBITER_PATH + "/img/sun/sun1_[s].png"],
-        [1, ORBITER_PATH + "/img/mercury/mercury_[s].png"],
-        [1, ORBITER_PATH + "/img/venus/venus_[s].png"], 
-        [1, ORBITER_PATH + "/img/earth/earth_[s].png"], 
-        [1, ORBITER_PATH + "/img/mars/mars_[s].png"],
-        [2, ORBITER_PATH + "/img/starman/starman_[s].png"]];
+        [0, libpath + "/img/sun/sun1_[s].png"],
+        [1, libpath + "/img/mercury/mercury_[s].png"],
+        [1, libpath + "/img/venus/venus_[s].png"], 
+        [1, libpath + "/img/earth/earth_[s].png"], 
+        [1, libpath + "/img/mars/mars_[s].png"],
+        [2, libpath + "/img/starman/starman_[s].png"]];
     var ratios = [30, 1500, 7000000000];
     var stepreps = 20000;
     var stepinterval = 10;
     return new Orbiter(universe, dpatts, ratios, stepreps, stepinterval);
 }
 
-function binarySystem(container) {
+function binarySystem(container, libpath) {
     var size = 8 * AU;
     var cx = size/2;
     var cy = size/2;
@@ -252,16 +250,27 @@ function binarySystem(container) {
         new Astro(CYGNI61B, cx-2.0E+11, cy, 0, -2.5E+04)];
     var universe = new Universe("Binary System", GRAVITY, size, astros);
 
-    loadHTML(false, ORBITER_PATH + "/orbiter.html", container);
-    replacePaths(ORBITER_PATH);
+    loadHTML(false, libpath + "/orbiter.html", container);
+    replacePaths("orbiter", libpath);
     
     var dpatts = [["[s]", 500],
-        [0, ORBITER_PATH + "/img/sun/sun1_[s].png"],
-        [0, ORBITER_PATH + "/img/sun/sun2_[s].png"]];
+        [0, libpath + "/img/sun/sun1_[s].png"],
+        [0, libpath + "/img/sun/sun2_[s].png"]];
     var ratios = [50, 1500];
     var stepreps = 20000;
     var stepinterval = 10;
     return new Orbiter(universe, dpatts, ratios, stepreps, stepinterval);
+}
+
+function replacePaths(currPath, newPath) {
+    var lazys = document.querySelectorAll('img[data-lazysrc]');
+    for (var lazy of lazys) {
+        var href = lazy.getAttribute("data-lazysrc");
+        lazy.setAttribute("data-lazysrc", href.replace(currPath, newPath));
+    }
+    for (var link of document.links) {
+        link.href = link.href.replace(currPath, newPath);
+    }
 }
  
 const AU = 1.495978707e11;
