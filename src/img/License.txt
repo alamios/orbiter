@@ -1,9 +1,9 @@
 
 Sun
 	Credit: Courtesy of NASA/SDO and the AIA, EVE, and HMI science teams.
-    License: SDO images and movies are not copyrighted unless explicitly noted. https://sdo.gsfc.nasa.gov/gallery/copyright/
-    Changes: Cropped the background and colored
-    Source: https://sdo.gsfc.nasa.gov/data/
+	License: SDO images and movies are not copyrighted unless explicitly noted. https://sdo.gsfc.nasa.gov/gallery/copyright/
+	Changes: Cropped the background and colored
+	Source: https://sdo.gsfc.nasa.gov/data/
 
 Mercury
 	Credit: NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institution of Washington

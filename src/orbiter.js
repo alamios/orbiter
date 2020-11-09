@@ -5,7 +5,6 @@
  * Date: 2020/01/01
  *
  */
-
 class AstroDefinition {
     constructor(name, mass, radius) {
         this.name = name;
@@ -226,6 +225,7 @@ function solarSystem(container, libpath) {
     var universe = new Universe("Solar System", GRAVITY, size, astros);
 
     loadHTML(false, libpath + "/orbiter.html", container);
+    loadCSS(libpath + "/orbiter.css");
     replacePaths("orbiter", libpath);
 
     var dpatts = [["[s]", 500],
@@ -251,6 +251,7 @@ function binarySystem(container, libpath) {
     var universe = new Universe("Binary System", GRAVITY, size, astros);
 
     loadHTML(false, libpath + "/orbiter.html", container);
+    loadCSS(libpath + "/orbiter.css");
     replacePaths("orbiter", libpath);
     
     var dpatts = [["[s]", 500],

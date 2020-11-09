@@ -1,0 +1,17 @@
+{
+  "name": "orbiter",
+  "description": "Simple 2D gravity simulator ",
+  "version": "1.0.0",
+  "homepage": "https://github.com/alamios/orbiter",
+  "repository": "github:alamios/orbiter",
+  "license": "MIT",
+  "author": {
+    "name": "alamios",
+    "email": "alamios@pm.me",
+    "url": "https://alamios.es"
+  },
+  "private": true,
+  "dependencies": {
+    "someutils-js": "alamios/someutils-js"
+  }
+}
